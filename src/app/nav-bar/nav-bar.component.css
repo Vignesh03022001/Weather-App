@@ -1,0 +1,25 @@
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
+.icon {
+  max-width: 48px;
+}
+input{
+  background-color: #EEE9DA;
+}
+input:focus {
+  outline: 0;
+}
+nav{
+  background-color:#EEE9DA;
+  color: #6096B4;
+}
