@@ -1,0 +1,45 @@
+<section class="border border-1">
+  <menu class="d-flex align-items-center justify-content-sm-between">
+    <div><h4>Today Overview</h4></div>
+    <menu class=" p-2 m-2">
+      <a href="https://weather.com/en-IN/weather/today/" class="d-flex align-items-center gap-1 text-decoration-none" target="_blank">
+        <em>More Details</em>
+      <span class="material-icons">launch</span>
+      </a>
+    </menu>
+  </menu>
+  <div class="container-fluid">
+    <div class="row p-2">
+      <div class="col p-2 border shadow-sm mx-4 rounded-3 d-flex align-items-center gap-5">
+        <span class="material-icons p-2 ms-4">thermostat</span>
+        <div class="m-2">
+          <div class="">Current Temperature</div>
+          <div class="p-2 text-dark fw-bolder">{{data?.main?.temp}}&deg;C</div>
+        </div>
+      </div>
+      <div class="col p-2 border shadow-sm mx-4 rounded-3 d-flex align-items-center gap-5">
+        <span class="material-icons p-2 ms-4">dew_point</span>
+        <div class="m-2">
+          <div class="">Feels Like Temperature</div>
+          <div class="p-2 text-dark fw-bolder">{{data?.main?.feels_like}}&deg;C</div>
+        </div>
+      </div>
+    </div>
+    <div class="row p-2">
+      <div class="col p-2 border shadow-sm mx-4 rounded-3 d-flex align-items-center gap-5">
+        <span class="material-icons p-2 ms-4">air</span>
+        <div class="m-2">
+          <div class="">Wind Speed</div>
+          <div class="p-2 text-dark fw-bolder">{{data?.wind?.speed}}&nbsp;m/s</div>
+        </div>
+      </div>
+      <div class="col p-2 border shadow-sm mx-4 rounded-3  d-flex align-items-center gap-5">
+        <span class="material-icons p-2 ms-4">waves</span>
+        <div class="m-2">
+          <div class="">Pressure</div>
+          <div class="p-2 text-dark fw-bolder">{{data?.main?.pressure}}&nbsp;Pa</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
