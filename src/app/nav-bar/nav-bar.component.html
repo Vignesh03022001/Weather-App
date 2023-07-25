@@ -2,13 +2,13 @@
   <div class="w-25 p-2">
     <img src="../../assets/weather-app.png" alt="" class="icon"/>
   </div>
-  <div class="d-flex align-items-lg-center gap-lg-5">
+  <div class="d-flex align-items-lg-center gap-lg-5" *ngIf="windowsWidth>500">
     <div class="p-1">
       <h4>{{month}}&ensp;{{year}}</h4>
       <p>{{dateWithDay}}</p>
     </div>
     <div class="d-flex gap-2 align-items-center">
-      <div class="border border-1 border-dark-subtle rounded-1 shadow-sm d-flex align-items-center p-2"><span class="material-icons">search</span><input type="text" class="border border-0 "/></div>
+      <div class="border border-1 border-dark-subtle rounded-1 shadow-sm d-flex align-items-center p-2"><span class="material-icons">search</span><input type="text" class="border border-0 " [(ngModel)]="searchInput"/></div>
       <span  class="material-icons border border-1 p-2 shadow-sm rounded-1">notifications</span>
       <span  class="material-icons border border-1 p-2 shadow-sm rounded-1">person</span>
     </div>

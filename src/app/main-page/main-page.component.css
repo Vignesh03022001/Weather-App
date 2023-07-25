@@ -1,0 +1,6 @@
+@media (width<=500px){
+.forMobile{
+  display:inline-block !important;
+  font-size: medium;
+}
+}

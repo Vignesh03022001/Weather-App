@@ -5,5 +5,9 @@ section {
   box-shadow: #6096B4 10px 10px 100px -20px,
   #6096B4 0px 30px 100px -30px,
   #6096B4 0px -2px 60px 10px inset !important;
-
+}
+@media (width<=500px){
+  .removePadding{
+    padding: 2px !important;
+  }
 }

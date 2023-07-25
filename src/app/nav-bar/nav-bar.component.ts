@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,6 +12,10 @@ export class NavBarComponent implements OnInit {
   month!: string;
   dateWithDay!: string;
 
+  windowsWidth!: number;
+
+  searchInput:string = '';
+
   ngOnInit() {
     this.date = new Date();
     this.year = this.date.getFullYear();
@@ -22,11 +26,17 @@ export class NavBarComponent implements OnInit {
       weekday: 'long',
       year: 'numeric',
     });
-    console.log(this.dateWithDay);
+    // console.log(this.dateWithDay);
   }
 
-  ngAfterViewInit(){
-    setInterval(()=>this.ngOnInit(),24*60*60*1000)
+  // this decorator
+  @HostListener('window:resize')
+  onResize() {
+    this.windowsWidth = window.innerWidth;
+    console.log(this.windowsWidth);
+  }
+
+  ngAfterViewInit() {
+    setInterval(() => this.ngOnInit(), 24 * 60 * 60 * 1000);
   }
 }
-

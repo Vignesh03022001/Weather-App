@@ -1,4 +1,4 @@
-<section class="border border-1">
+<section class="border border-1 border-danger">
   <menu class="d-flex align-items-center justify-content-sm-between">
     <div><h4>Today Overview</h4></div>
     <menu class=" p-2 m-2">
@@ -9,35 +9,35 @@
     </menu>
   </menu>
   <div class="container-fluid">
-    <div class="row p-2">
-      <div class="col p-2 border shadow-sm mx-4 rounded-3 d-flex align-items-center gap-5">
-        <span class="material-icons p-2 ms-4">thermostat</span>
+    <div class="row p-2 ">
+      <div class="col p-2 border shadow-sm mx-4 rounded-3 d-flex align-items-center gap-5 removePadding">
+        <span class="material-icons removePadding p-2 ms-4">thermostat</span>
         <div class="m-2">
           <div class="">Current Temperature</div>
-          <div class="p-2 text-dark fw-bolder">{{data?.main?.temp}}&deg;C</div>
+          <div class="p-2 text-dark fw-bolder">{{weatherModel.temperature}}&deg;C</div>
         </div>
       </div>
-      <div class="col p-2 border shadow-sm mx-4 rounded-3 d-flex align-items-center gap-5">
-        <span class="material-icons p-2 ms-4">dew_point</span>
+      <div class="col p-2 border shadow-sm mx-4 rounded-3 d-flex align-items-center gap-5 removePadding">
+        <span class="material-icons p-2 removePadding ms-4">dew_point</span>
         <div class="m-2">
           <div class="">Feels Like Temperature</div>
-          <div class="p-2 text-dark fw-bolder">{{data?.main?.feels_like}}&deg;C</div>
+          <div class="p-2 text-dark fw-bolder">{{weatherModel.realFeelTemperature}}&deg;C</div>
         </div>
       </div>
     </div>
     <div class="row p-2">
-      <div class="col p-2 border shadow-sm mx-4 rounded-3 d-flex align-items-center gap-5">
-        <span class="material-icons p-2 ms-4">air</span>
+      <div class="col p-2 border shadow-sm mx-4 rounded-3 d-flex align-items-center gap-5 removePadding">
+        <span class="material-icons p-2 removePadding ms-4">air</span>
         <div class="m-2">
           <div class="">Wind Speed</div>
-          <div class="p-2 text-dark fw-bolder">{{data?.wind?.speed}}&nbsp;m/s</div>
+          <div class="p-2 text-dark fw-bolder">{{weatherModel.windSpeed}}&nbsp;Kmph</div>
         </div>
       </div>
-      <div class="col p-2 border shadow-sm mx-4 rounded-3  d-flex align-items-center gap-5">
-        <span class="material-icons p-2 ms-4">waves</span>
+      <div class="col p-2 border shadow-sm mx-4 rounded-3  d-flex align-items-center gap-5 removePadding">
+        <span class="material-icons p-2 removePadding ms-4">waves</span>
         <div class="m-2">
           <div class="">Pressure</div>
-          <div class="p-2 text-dark fw-bolder">{{data?.main?.pressure}}&nbsp;Pa</div>
+          <div class="p-2 text-dark fw-bolder">{{weatherModel.pressure}}&nbsp;Pa</div>
         </div>
       </div>
     </div>
