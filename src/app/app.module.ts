@@ -9,6 +9,7 @@ import { LeftSideViewComponent } from './main-page/left-side-view/left-side-view
 import { MainViewComponent } from './main-page/main-view/main-view.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { MainPageService } from './main-page/main-page.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [MainPageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

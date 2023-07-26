@@ -1,11 +1,12 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css'],
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent implements OnInit,AfterViewInit {
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
   date!: Date;
   year!: number;
@@ -14,9 +15,10 @@ export class NavBarComponent implements OnInit {
 
   windowsWidth!: number;
 
-  searchInput:string = '';
+  public searchInput = 'chennai';
 
   ngOnInit() {
+    this.windowsWidth = window.innerWidth;
     this.date = new Date();
     this.year = this.date.getFullYear();
     this.month = this.date.toLocaleString('en-US', { month: 'long' });
@@ -29,7 +31,7 @@ export class NavBarComponent implements OnInit {
     // console.log(this.dateWithDay);
   }
 
-  // this decorator
+  // this decorator listens to the events and execute the call back function
   @HostListener('window:resize')
   onResize() {
     this.windowsWidth = window.innerWidth;
